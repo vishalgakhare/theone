@@ -1,0 +1,955 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>Effective Engineer - Notes - Vishal Gakhare</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#effective-engineer-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Vishal Gakhare" class="md-header__button md-logo" aria-label="Vishal Gakhare" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vishal Gakhare
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Effective Engineer - Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Vishal Gakhare" class="md-nav__button md-logo" aria-label="Vishal Gakhare" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Vishal Gakhare
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          AWS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AWS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AWS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/Cheatsheet/" class="md-nav__link">
+        Cheatsheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Books
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Books" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Books
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Effective Engineer - Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Effective Engineer - Notes
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-an-effective-engineer" class="md-nav__link">
+    What's an Effective Engineer?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adopt-the-right-mindsets" class="md-nav__link">
+    Adopt the Right Mindsets
+  </a>
+  
+    <nav class="md-nav" aria-label="Adopt the Right Mindsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#focus-on-high-leverage-activities" class="md-nav__link">
+    Focus on High Leverage Activities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimize-for-learning" class="md-nav__link">
+    Optimize for Learning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioritize-regularly" class="md-nav__link">
+    Prioritize Regularly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invest-in-iteration-speed" class="md-nav__link">
+    Invest in Iteration Speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-what-you-want-to-improve" class="md-nav__link">
+    Measure what you want to Improve
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Your%20Money%20Ratios/" class="md-nav__link">
+        Your Money Ratios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Your%20Money%20or%20Your%20Life/" class="md-nav__link">
+        Your Money or Your Life
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Coding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Coding" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Coding
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Coding/Setting%20Up%20Mac%20for%20Coding/" class="md-nav__link">
+        Setting Up Mac for Coding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Coding/Setting%20Up%20the%20Terminal/" class="md-nav__link">
+        Setting Up the Terminal
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Personal Finance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Personal Finance" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Personal Finance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Personal%20Finance/Home%20Buying/" class="md-nav__link">
+        Home Buying
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-an-effective-engineer" class="md-nav__link">
+    What's an Effective Engineer?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adopt-the-right-mindsets" class="md-nav__link">
+    Adopt the Right Mindsets
+  </a>
+  
+    <nav class="md-nav" aria-label="Adopt the Right Mindsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#focus-on-high-leverage-activities" class="md-nav__link">
+    Focus on High Leverage Activities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimize-for-learning" class="md-nav__link">
+    Optimize for Learning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioritize-regularly" class="md-nav__link">
+    Prioritize Regularly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invest-in-iteration-speed" class="md-nav__link">
+    Invest in Iteration Speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-what-you-want-to-improve" class="md-nav__link">
+    Measure what you want to Improve
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="effective-engineer-notes">Effective Engineer - Notes</h1>
+<ul>
+<li>By Edmond Lau</li>
+<li>Highly Recommended :+1:</li>
+<li>http://www.theeffectiveengineer.com/</li>
+</ul>
+<h3 id="whats-an-effective-engineer">What's an Effective Engineer?</h3>
+<ul>
+<li>They are the people who get things done. Effective Engineers produce results. </li>
+</ul>
+<h2 id="adopt-the-right-mindsets">Adopt the Right Mindsets</h2>
+<h3 id="focus-on-high-leverage-activities">Focus on High Leverage Activities</h3>
+<ul>
+<li>Leverage = Impact Produced / Time Invested</li>
+<li>Use Leverage as Your Yardstick for Effectiveness</li>
+<li>80% of the impact comes from 20% of the work.</li>
+<li>Focus on high leverage and not just easy wins.</li>
+</ul>
+<h3 id="optimize-for-learning">Optimize for Learning</h3>
+<ul>
+<li>Change jobs if you have to. </li>
+<li>Optimizing for learning is high leverage. </li>
+<li>Adopt a growth mindset. </li>
+<li>Talk to people. Become good at telling stories. It gets better with time. </li>
+<li>Those with a growth mindset believe that they can cultivate and grow their intelligence and skills through effort.</li>
+<li>Own your story.</li>
+<li>Invest in the rate of learning</li>
+<li>Learning compounds. Compounding leads to exponential growth. Earlier the compounding starts, the better. </li>
+<li>Working on unchallenging tasks is a huge opportunity cost. You missed out on compounded learning. </li>
+<li>Prioritize learning over profitability.</li>
+<li>Invest your time in activities with the highest learning rate.</li>
+<li>Seek Work Environments Conducive to Learning</li>
+<li>Fast Growth: Companies where #problems &gt;&gt; #resources. Opportunity to choose high impact work.</li>
+<li>Make sure you are working on high priority projects. </li>
+<li>Openness: Look for culture with curiosity, where everyone is encouraged to ask questions.</li>
+<li>Fast Paced. </li>
+<li>People smarter than you.</li>
+<li>Autonomy: Freedom to choose what to work on. Smaller companies =&gt; More autonomy. </li>
+<li>While on Job</li>
+<li>Make a daily habit of acquiring new skills.</li>
+<li>Read code written by brilliant engineers. </li>
+<li>Jump fearlessly into code you don't know.</li>
+<li>Always be learning. Invest in skills that are in high demand.</li>
+<li>Read Books. Attend Conferences.</li>
+<li>Build and maintain strong relationships.</li>
+</ul>
+<h3 id="prioritize-regularly">Prioritize Regularly</h3>
+<ul>
+<li>Opportunity cost of working on wrong ideas can set back growth by years.</li>
+<li>Prioritize tasks based on ROI.</li>
+<li>Regular prioritization is high leverage activity.</li>
+<li>On TODO Lists:</li>
+<li>Maintain a 'single' todo lists where all tasks are listed. </li>
+<li>Don't try to remember stuff. Brain is bad at remembering. It's rather good at processing. </li>
+<li>Ask yourself regularly: Is this the most important thing I should be working on?</li>
+<li>Focus on what directly produces value. </li>
+<li>Learn to say no.</li>
+<li>Focus on the important and non-urgent.</li>
+<li>Find ways to get into flow. “A state of effortless concentration so deep that they lose their sense of time, of themselves, of their problems.”</li>
+<li>When possible, preserve larger blocks of focused time in your schedule.</li>
+<li>Limit the amount of Work in Progress.</li>
+<li>Cost of context switching is high.</li>
+<li>Prioritizing is difficult. </li>
+<li>Prioritization is high leverage. It has huge impact on your ability to get right things done.</li>
+</ul>
+<h3 id="invest-in-iteration-speed">Invest in Iteration Speed</h3>
+<ul>
+<li>Continuous Deployment is high leverage.</li>
+<li>Will save a lot of time in manual deployment of code. They are the people who get things done. Effective Engineers produce results. </li>
+<li>Move fast to learn fast.</li>
+<li>Move fast and break things.</li>
+<li>Moving fast enables us to build more things and learn at faster rate. </li>
+<li>Invest in time saving tools.</li>
+<li>If you have to do something more than twice, write a tool the third time. </li>
+<li>Tools are multipliers that allow your to scale your impact beyond the confines of a day.</li>
+<li>Faster tools get used more often.</li>
+<li>Faster tools can enable new workflows that previously weren't possible.</li>
+<li>Productivity skyrockets with tools.</li>
+<li>Time saving property of tools also scale with team adoption.</li>
+<li>Shorten your debugging and validation Loops.</li>
+<li>Extra time spent in optimizing debugging workflow can help you fix annoying bugs with less headache.</li>
+<li>Debugging is hard. It's time consuming. Upfront investments to shorten debugging loops are worth it. </li>
+<li>High test coverage to reduce build and site breakages.</li>
+<li>Fast unit tests to encourage people to run them.</li>
+<li>Fast and incremental compiles and reloads to reduce development time.</li>
+<li>Master you programming environment.</li>
+<li>One editor. One high level language. Shell. Keyboard &gt; Mouse. Automate manual workflows. Use interactive shell. Make running specific tests easy.</li>
+<li><strong>Faster you can iterate, faster you can learn.</strong> </li>
+</ul>
+<h3 id="measure-what-you-want-to-improve">Measure what you want to Improve</h3>
+<ul>
+<li>Use metric to drive progress.</li>
+<li>If you can't measure it, you can't improve it.</li>
+<li>Good metric. <ul>
+<li>Helps you focus on right things.</li>
+<li>Drives forward progress.</li>
+<li>Helps you guard against future regressions. </li>
+<li><strong>Performance ratcheting</strong>: Any change should strictly improve the metric.  </li>
+<li>Bad metric can lead to unwanted behavior.</li>
+<li>Examples: </li>
+<li>
+<h1 id="hours-worked-productivity">hours worked &lt; productivity.</h1>
+</li>
+<li>click through rates &lt; long click through rates.</li>
+</ul>
+</li>
+<li>Metric you choose influences your decisions and behavior.</li>
+<li>Look for metric that, when optimized, maximizes impact for the team.</li>
+<li>Actionable metric - Whose movement can be casually explained by team's effort.</li>
+<li>Responsive metric - Updates quickly to give back feedback whether a given change was =ve or -ive.</li>
+<li>Choosing a metric is high leverage.</li>
+<li>Dedicate time to pick right metric. </li>
+<li>Instrument everything to understand what's going on. </li>
+<li>Measure anything, measure everything. </li>
+<li>Graphite, statsd. A single line of code lets you define a new counter or timer on the fly. </li>
+<li>Measuring goals you want to achieve is high leverage.</li>
+<li>Internalize useful numbers.</li>
+<li>Knowledge of useful numbers provide a valuable shortcut for knowing where to invest efforts to maximize gains.</li>
+<li>Need upfront work. Need not be accurate, ballpark idea suffices.</li>
+<li>Knowing useful numbers enables you to do back of the envelope calculations to quickly estimate the performance properties of a design without actually building it.</li>
+<li>Internalizing useful number help you spot anomalies.
+Be skeptical about data integrity.</li>
+<li>Log data liberally.</li>
+<li>Build tools to iterate on data accuracy sooner.</li>
+<li>Examine data sooner.</li>
+<li>When numbers look off, dig in to it sooner.</li>
+</ul>
+<p>:heavy_check_mark: Measure your progress. Carefully choose your top-level metric. Instrument your system. Know your numbers. Prioritize data integrity. </p>
+<h3 id="validate-your-ideas-early-and-often">Validate your ideas early and often.</h3>
+<ul>
+<li>Not validating early leads to wasted efforts.</li>
+<li>Don't delay get feedback. </li>
+<li>Find low effort ways to validate work. </li>
+<li>Power of small batches. Helps you avoid making a big mistake by stopping the flow.</li>
+<li>Approach problem iteratively. </li>
+<li>No large implementations.</li>
+<li>Working solo? Be wary. Be extra vocal and get feedback.</li>
+</ul>
+<h3 id="improve-project-estimation-skills">Improve project estimation skills.</h3>
+<ul>
+<li>Beware of mythical man month. Communication overhead is significant. </li>
+<li>Reduce risk early.</li>
+<li>Rewrite projects - almost always fail. </li>
+<li>Additional hours hurt productivity. Causes burnout. </li>
+<li>Do the riskiest task first. </li>
+<li>Allow buffer room for the unknown.</li>
+</ul>
+<h3 id="balance-quality-with-pragmatism">Balance Quality with Pragmatism</h3>
+<ul>
+<li>High code quality. Code readability.</li>
+<li>Establish sustainable code review process.</li>
+<li>Code reviews help:</li>
+<li>Catch bugs and design problems early.</li>
+<li>Sharing working knowledge of the codebase.</li>
+<li>Increases long term agility. Easier to understand, quicker to modify. </li>
+</ul>
+<h4 id="manage-complexity-through-abstraction">Manage complexity through Abstraction</h4>
+<ul>
+<li>Example: MapReduce.</li>
+<li>Right abstractions make huge difference.</li>
+<li>“Pick the right ones, and programming will flow naturally from design; modules will have small and simple interfaces; and new functionality will more likely fit in without extensive reorganization,”</li>
+<li>“Pick the wrong ones, and programming will be a series of nasty surprises: interfaces will become baroque and clumsy as they are forced to accommodate unanticipated interactions, and even the simplest of changes will be hard to make.”</li>
+<li>The right abstraction can increase engineering productivity by an order of magnitude. </li>
+<li>Simple abstractions avoid interweaving multiple concepts, so that you can reason about them independently rather than being forced to consider them together.</li>
+<li>Designing good abstractions take work. </li>
+<li>An abstraction's usage and popularity provides a reasonable proxy for its quality.</li>
+</ul>
+<h4 id="automate-testing">Automate Testing</h4>
+<ul>
+<li>Unit test cases and some integration testing provide a scalable way of managing growing codebase.</li>
+<li>A suite of extensive and automated tests can reduce overall error rates by validating the quality and by safeguarding against regressions.</li>
+<li>Tests also allow engineers to make changes, especially large refactorings, with significantly higher confidence.</li>
+<li>Despite its benefits, it can be difficult to foster a culture of automated testing.</li>
+<li>Focus on high leverage tests. </li>
+<li>Writing more tests, creating a virtuous feedback cycle and saving more development time.</li>
+</ul>
+<h4 id="repay-technical-debt">Repay Technical Debt</h4>
+<ul>
+<li>Technical debt refers to all the deferred work that’s necessary to improve the health and quality of the codebase and that would slow us down if left unaddressed.</li>
+<li>Accumulating technical debt is fine as far as it is repaid within time. </li>
+<li>Refactor often.</li>
+</ul>
+<h3 id="reduce-operational-complexity">Reduce Operational Complexity</h3>
+<ul>
+<li>Keep no. of technologies low. Don’t sway towards shiny new technologies.</li>
+<li>Every additional technology you add is is guaranteed to go wrong eventually. Will need your time. </li>
+<li>Do the simple thing first.</li>
+<li>Embrace operational simplicity. </li>
+<li>The first solution that comes to mind is generally complex. Don't stop. Keep peeling off the layers of onion. </li>
+<li>Simplify the architecture to reduce their operational burden. </li>
+<li>“What’s the simplest solution that can get the job done while also reducing our future operational burden?” </li>
+<li>Discipline to focus on simplicity is high leverage. </li>
+</ul>
+<h3 id="fail-fast">Fail Fast</h3>
+<ul>
+<li>Fail immediately and visibly.</li>
+<li>Doesn’t necessarily mean crashing your programs for users.</li>
+<li>fail-fast to surface issues immediately. </li>
+<li>Failing fast is high leverage as it saves debugging time.</li>
+</ul>
+<h3 id="relentlessly-automate">Relentlessly Automate</h3>
+<ul>
+<li>Automating mechanics is good.</li>
+<li>Automating decision making - no.</li>
+<li>Hone your ability to respond and recover quickly.</li>
+<li>Leverage recovering quickly &gt; Leverage preventing failures.</li>
+<li>“script for success,” practice failure scenarios, and work on our ability to recover quickly. </li>
+<li>Make batch process idempotent </li>
+<li>Make processes retryable, i.e., not leaving any global state. </li>
+</ul>
+<h3 id="invest-in-your-teams-growth">Invest in your team's Growth</h3>
+<ul>
+<li>Invest in onboarding.</li>
+<li>The higher you climb up the engineering ladder, the more your effectiveness will be measured not by your individual contributions but by your impact on the people around you.</li>
+<li><strong>"You’re a staff engineer if you’re making a whole team better than it would be otherwise. You’re a principal engineer if you’re making the whole company better than it would be otherwise. And you’re distinguished if you’re improving the industry.”</strong> 
+￼- Focus primarily on making everyone around you succeed.</li>
+<li>Your career depends on your team's success.</li>
+<li>Make hiring everyone's responsibility. </li>
+<li>Shared ownership of code. </li>
+<li>Keep bus factor more than one. </li>
+<li>Shared ownership removes isolated silos of information.</li>
+<li>Build collective wisdom through post mortems.</li>
+<li>Invest in automated testing.</li>
+<li>Automated test cases lead to higher confidence when refactoring.</li>
+<li>Write test cases when the code is fresh in mind.</li>
+<li>Don’t be dogmatic about 100% code coverage.</li>
+<li>Value of tests increases over time and cost to write goes down. </li>
+<li>Hire the best. </li>
+<li>Surround yourself with great advisors</li>
+</ul>
+<p>☀️ : <strong>“Leverage is the lens through which effective engineers view their activities. ”</strong> ☀️</p>
+<h3 id="10-books-to-read">10 Books to read:</h3>
+<ul>
+<li>Peopleware Productive projects and Teams. Amazon. My Summary.</li>
+<li>Team Geek: A Software Developer’s Guide to Working Well with Others. (Debugging Teams) Amazon. My Summary. </li>
+<li>High Output Management</li>
+<li>Getting Things Done: The Art of Stress-Free Productivity</li>
+<li>The 4-Hour Workweek: Escape 9-5, Live Anywhere, and Join the New Rich</li>
+<li>The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change</li>
+<li>Conscious Business: How to Build Value Through Values</li>
+<li>Your Brain at Work</li>
+<li>Flow: The Psychology of Optimal Experience</li>
+<li>Succeed: How We Can Reach Our Goals</li>
+</ul>
+<h3 id="blogs">Blogs:</h3>
+<p>Recommended Blogs To Follow:</p>
+<ul>
+<li>http://www.theeffectiveengineer.com/ - The Effective Engineer is my personal blog, where I write about engineering habits, productivity tips, leadership, and culture.</li>
+<li>http://www.kalzumeus.com/ - Patrick McKenzie runs his own software business and has written many excellent long-form articles on career advice, consulting, SEO, and software sales.</li>
+<li>http://katemats.com/ - Kate Matsudaira, who has worked at large companies like Microsoft and Amazon as well as at startups, shares advice about tech, leadership, and life on her blog.</li>
+<li>http://randsinrepose.com/ - Michael Lopp has worked for many years in leadership positions at Netscape, Apple, Palantir, and Pinterest, and writes about tech life and engineering management.</li>
+<li>http://softwareleadweekly.com/ - Oren Ellenbogen curates a high-quality weekly newsletter on engineering leadership and culture.</li>
+<li>http://calnewport.com/ - Cal Newport, an assistant professor of computer science at Georgetown, focuses on evidence-based advice for building a successful and fulfilling life.</li>
+<li>http://www.joelonsoftware.com/ - Joel Spolsky, the co-founder of Stack Exchange, provides all sorts of programming pearls of wisdom on his blog.</li>
+<li>http://martinfowler.com/ - Martin Fowler, author of the book Refactoring, writes about how to maximize the productivity of software teams and provides detailed write-ups of common programming patterns.</li>
+<li>http://pgbovine.net/ - Philip Guo, a computer science professor, has written extensively and openly about his graduate school and work experiences.</li>
+</ul>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../AWS/Cheatsheet/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cheatsheet" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Cheatsheet
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Your%20Money%20Ratios/" class="md-footer__link md-footer__link--next" aria-label="Next: Your Money Ratios" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Your Money Ratios
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

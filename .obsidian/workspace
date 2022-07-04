@@ -1,0 +1,99 @@
+{
+  "main": {
+    "id": "468cfbd091a83864",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b76472d1ee91d25",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Coding/Setting Up the Terminal.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8bce0434045a29cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4ed979ba76c5f57",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "988a1b21d585c1b9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "86f7f5be42a24b07",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fda9d0f6bbe9aa67",
+    "type": "split",
+    "children": [
+      {
+        "id": "bde7f1b3dbfb7bb6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3b7dd5704fe96ea",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Coding/Setting Up the Terminal.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2b76472d1ee91d25",
+  "lastOpenFiles": [
+    "Coding/Setting Up the Terminal.md",
+    "Coding/Setting Up Mac for Coding.md",
+    "Index 1.md",
+    "Docker 1.md",
+    "Docker.md",
+    "docs/Books/Your Money Ratios.md",
+    "docs/Index.md"
+  ]
+}
