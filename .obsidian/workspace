@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Coding/Setting Up the Terminal.md",
-            "mode": "preview"
+            "file": "docs/index.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Coding/Setting Up the Terminal.md",
+                "file": "docs/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "2b76472d1ee91d25",
   "lastOpenFiles": [
+    "docs/index.md",
+    "docs/Docker.md",
     "Coding/Setting Up the Terminal.md",
     "Coding/Setting Up Mac for Coding.md",
     "Index 1.md",

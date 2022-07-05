@@ -29,3 +29,12 @@ theme:
   favicon: assets/favicon.png
   icon:
     logo: logo
+
+# Customization
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/vishalgakhare
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/vishalgakhare/
