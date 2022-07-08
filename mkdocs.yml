@@ -39,6 +39,18 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/vishalgakhare/
 
+# $ pip install pymdown-extensions
+# https://facelessuser.github.io/pymdown-extensions/installation/
+markdown_extensions:
+  - abbr
+  - footnotes
+  - pymdownx.snippets:
+      auto_append: [_includes/abbreviations.md]
+  # pip install mkdocs-material-extensions for emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
 # mkdocs-ezlinks-plugin
 plugins:
   - search
