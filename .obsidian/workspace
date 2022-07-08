@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/index.md",
-            "mode": "source"
+            "file": "docs/AWS/Cheatsheet.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/AWS/Cheatsheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "2b76472d1ee91d25",
   "lastOpenFiles": [
+    "docs/AWS/Cheatsheet.md",
     "docs/index.md",
     "docs/Docker.md",
     "Coding/Setting Up the Terminal.md",

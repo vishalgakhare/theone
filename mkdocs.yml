@@ -38,3 +38,7 @@ extra:
       link: https://github.com/vishalgakhare
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/vishalgakhare/
+
+plugins:
+  - search
+  - ezlinks
