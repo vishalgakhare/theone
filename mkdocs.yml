@@ -39,6 +39,6 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/vishalgakhare/
 
+# mkdocs-ezlinks-plugin
 plugins:
   - search
-  - ezlinks
