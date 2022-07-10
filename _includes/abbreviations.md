@@ -1,1 +1,0 @@
-*[OPC]= Office of Privacy Commission 

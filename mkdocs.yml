@@ -44,6 +44,10 @@ extra:
 markdown_extensions:
   - abbr
   - footnotes
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys # https://squidfunk.github.io/mkdocs-material/reference/formatting/#adding-keyboard-keys
   - pymdownx.snippets:
       auto_append: [_includes/abbreviations.md]
   # pip install mkdocs-material-extensions for emoji
