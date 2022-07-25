@@ -8,7 +8,7 @@ mkdocs build
 
 echo "git commit..."
 
-git add -A && git commit -m "Updated docs"
+git add -A && git commit -m "Updated docs ${now}"
 
 echo "git push"
 
