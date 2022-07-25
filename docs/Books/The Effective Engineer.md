@@ -1,6 +1,5 @@
 # Effective Engineer - Notes
-- By Edmond Lau
-- Highly Recommended :+1:
+- By Edmond Lau. Highly Recommended :+1:
 - http://www.theeffectiveengineer.com/
 
 ### What's an Effective Engineer? 
@@ -18,22 +17,29 @@
 - Change jobs if you have to. 
 - Optimizing for learning is high leverage. 
 - Adopt a growth mindset. 
+
   - Talk to people. Become good at telling stories. It gets better with time. 
   - Those with a growth mindset believe that they can cultivate and grow their intelligence and skills through effort.
   - Own your story.
+  
 - Invest in the rate of learning
+
   - Learning compounds. Compounding leads to exponential growth. Earlier the compounding starts, the better. 
   - Working on unchallenging tasks is a huge opportunity cost. You missed out on compounded learning. 
   - Prioritize learning over profitability.
   - Invest your time in activities with the highest learning rate.
+  
 - Seek Work Environments Conducive to Learning
+
   - Fast Growth: Companies where #problems >> #resources. Opportunity to choose high impact work.
   - Make sure you are working on high priority projects. 
   - Openness: Look for culture with curiosity, where everyone is encouraged to ask questions.
   - Fast Paced. 
   - People smarter than you.
   - Autonomy: Freedom to choose what to work on. Smaller companies => More autonomy. 
+  
 - While on Job
+
   - Make a daily habit of acquiring new skills.
   - Read code written by brilliant engineers. 
   - Jump fearlessly into code you don't know.
@@ -48,6 +54,7 @@
 - On TODO Lists:
   - Maintain a 'single' todo lists where all tasks are listed. 
   - Don't try to remember stuff. Brain is bad at remembering. It's rather good at processing. 
+  
 - Ask yourself regularly: Is this the most important thing I should be working on?
 - Focus on what directly produces value. 
 - Learn to say no.
@@ -83,16 +90,18 @@
 - **Faster you can iterate, faster you can learn.** 
 
 ### Measure what you want to Improve
+
 - Use metric to drive progress.
   - If you can't measure it, you can't improve it.
   - Good metric. 
+  
     - Helps you focus on right things.
     - Drives forward progress.
     - Helps you guard against future regressions. 
     - **Performance ratcheting**: Any change should strictly improve the metric.  
     - Bad metric can lead to unwanted behavior.
     - Examples: 
-      - #hours worked < productivity.
+      - number of hours worked < productivity.
       - click through rates < long click through rates.
   - Metric you choose influences your decisions and behavior.
   - Look for metric that, when optimized, maximizes impact for the team.
@@ -100,15 +109,18 @@
   - Responsive metric - Updates quickly to give back feedback whether a given change was =ve or -ive.
   - Choosing a metric is high leverage.
   - Dedicate time to pick right metric. 
+  
 - Instrument everything to understand what's going on. 
   - Measure anything, measure everything. 
   - Graphite, statsd. A single line of code lets you define a new counter or timer on the fly. 
   - Measuring goals you want to achieve is high leverage.
+  
 - Internalize useful numbers.
   - Knowledge of useful numbers provide a valuable shortcut for knowing where to invest efforts to maximize gains.
   - Need upfront work. Need not be accurate, ballpark idea suffices.
   - Knowing useful numbers enables you to do back of the envelope calculations to quickly estimate the performance properties of a design without actually building it.
   - Internalizing useful number help you spot anomalies.
+  
 Be skeptical about data integrity.
  - Log data liberally.
  - Build tools to iterate on data accuracy sooner.
@@ -118,6 +130,7 @@ Be skeptical about data integrity.
 :heavy_check_mark: Measure your progress. Carefully choose your top-level metric. Instrument your system. Know your numbers. Prioritize data integrity. 
 
 ### Validate your ideas early and often. 
+
 - Not validating early leads to wasted efforts.
 - Don't delay get feedback. 
 - Find low effort ways to validate work. 
@@ -127,6 +140,7 @@ Be skeptical about data integrity.
 - Working solo? Be wary. Be extra vocal and get feedback.
 
 ### Improve project estimation skills.
+
 - Beware of mythical man month. Communication overhead is significant. 
 - Reduce risk early.
 - Rewrite projects - almost always fail. 
@@ -135,6 +149,7 @@ Be skeptical about data integrity.
 - Allow buffer room for the unknown.
 
 ### Balance Quality with Pragmatism
+
 - High code quality. Code readability.
 - Establish sustainable code review process.
 - Code reviews help:
@@ -143,6 +158,7 @@ Be skeptical about data integrity.
   - Increases long term agility. Easier to understand, quicker to modify. 
 
 #### Manage complexity through Abstraction  
+
 - Example: MapReduce.
 - Right abstractions make huge difference.
 - “Pick the right ones, and programming will flow naturally from design; modules will have small and simple interfaces; and new functionality will more likely fit in without extensive reorganization,”
@@ -153,6 +169,7 @@ Be skeptical about data integrity.
 - An abstraction's usage and popularity provides a reasonable proxy for its quality.
 
 #### Automate Testing
+
 - Unit test cases and some integration testing provide a scalable way of managing growing codebase.
 - A suite of extensive and automated tests can reduce overall error rates by validating the quality and by safeguarding against regressions.
 - Tests also allow engineers to make changes, especially large refactorings, with significantly higher confidence.
@@ -161,11 +178,13 @@ Be skeptical about data integrity.
 - Writing more tests, creating a virtuous feedback cycle and saving more development time.
 
 #### Repay Technical Debt
+
 - Technical debt refers to all the deferred work that’s necessary to improve the health and quality of the codebase and that would slow us down if left unaddressed.
 - Accumulating technical debt is fine as far as it is repaid within time. 
 - Refactor often.
 
 ### Reduce Operational Complexity
+
 - Keep no. of technologies low. Don’t sway towards shiny new technologies.
 - Every additional technology you add is is guaranteed to go wrong eventually. Will need your time. 
 - Do the simple thing first.
@@ -176,12 +195,14 @@ Be skeptical about data integrity.
 - Discipline to focus on simplicity is high leverage. 
 
 ### Fail Fast 
+
 - Fail immediately and visibly.
 - Doesn’t necessarily mean crashing your programs for users.
 - fail-fast to surface issues immediately. 
 - Failing fast is high leverage as it saves debugging time.
 
 ### Relentlessly Automate
+
 - Automating mechanics is good.
 - Automating decision making - no.
 - Hone your ability to respond and recover quickly.
@@ -191,10 +212,13 @@ Be skeptical about data integrity.
 - Make processes retryable, i.e., not leaving any global state. 
 
 ### Invest in your team's Growth
+
 - Invest in onboarding.
 - The higher you climb up the engineering ladder, the more your effectiveness will be measured not by your individual contributions but by your impact on the people around you.
-- **"You’re a staff engineer if you’re making a whole team better than it would be otherwise. You’re a principal engineer if you’re making the whole company better than it would be otherwise. And you’re distinguished if you’re improving the industry.”** 
-￼- Focus primarily on making everyone around you succeed.
+
+> **"You’re a staff engineer if you’re making a whole team better than it would be otherwise. You’re a principal engineer if you’re making the whole company better than it would be otherwise. And you’re distinguished if you’re improving the industry.”** 
+
+- Focus primarily on making everyone around you succeed.
 - Your career depends on your team's success.
 - Make hiring everyone's responsibility. 
 - Shared ownership of code. 
@@ -211,7 +235,8 @@ Be skeptical about data integrity.
 
 ☀️ : **“Leverage is the lens through which effective engineers view their activities. ”** ☀️
 
-### 10 Books to read: 
+## 10 Books to read
+
 - Peopleware Productive projects and Teams. Amazon. My Summary.
 - Team Geek: A Software Developer’s Guide to Working Well with Others. (Debugging Teams) Amazon. My Summary. 
 - High Output Management

@@ -58,3 +58,4 @@ markdown_extensions:
 # mkdocs-ezlinks-plugin
 plugins:
   - search
+  - ezlinks
