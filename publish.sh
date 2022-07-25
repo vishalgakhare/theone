@@ -7,8 +7,11 @@ echo "building..."
 mkdocs build
 
 echo "git commit..."
+timestamp=$(date +"%D %T")
 
-git add -A && git commit -m "Updated docs ${now}"
+echo "Updated docs $timestamp"
+
+git add -A && git commit -m "Updated docs $timestamp"
 
 echo "git push"
 
