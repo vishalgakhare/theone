@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/Books/The Effective Engineer.md",
-            "mode": "preview",
+            "file": "docs/Immigration/OCI for Minor.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Books/The Effective Engineer.md",
+                "file": "docs/Immigration/OCI for Minor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "2b76472d1ee91d25",
   "lastOpenFiles": [
+    "docs/Books/The Effective Engineer.md",
     "docs/Books/Your Money Ratios.md",
     "docs/Books/Your Money or Your Life.md",
     "docs/AWS/Cheatsheet.md",
@@ -97,7 +98,6 @@
     "Coding/Setting Up the Terminal.md",
     "Coding/Setting Up Mac for Coding.md",
     "Index 1.md",
-    "Docker 1.md",
-    "Docker.md"
+    "Docker 1.md"
   ]
 }
