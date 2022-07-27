@@ -697,12 +697,60 @@
       
       
         <label class="md-nav__link" for="__nav_6">
+          Immigration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Immigration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Immigration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Immigration/OCI%20for%20Minor/" class="md-nav__link">
+        OCI for Minor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
           Personal Finance
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Personal Finance" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Personal Finance
         </label>
@@ -967,7 +1015,7 @@
 
   <h1>Cheatsheet</h1>
 
-<h2 id="ec2"><strong>EC2</strong></h2>
+<h2 id="ec2"><strong>EC2</strong><a class="headerlink" href="#ec2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Dedicated (Instances): No other customers will share the hardware. May share hardware with other instances of ONLY your account.</li>
 <li>(Dedicated) Hosts: Book an entire physical server and have full control of EC2 instance placement.</li>
@@ -994,7 +1042,7 @@
 <li>Spot blocks are Spot Instances with a <strong>defined duration &amp; are designed not to be interrupted</strong>.</li>
 <li>If your Spot Instance request is disabled and has an associated stopped Spot Instance, <strong>canceling the request does not terminate the instance</strong>.</li>
 </ul>
-<h2 id="placement-groups"><strong>Placement groups</strong></h2>
+<h2 id="placement-groups"><strong>Placement groups</strong><a class="headerlink" href="#placement-groups" title="Permanent link">&para;</a></h2>
 <ul>
 <li>It is recommended that you launch the number of instances that you need in the placement group in a single launch request and that you use the same instance type for all instances in the placement group. If you try to add more instances to the placement group later, or if you try to launch more than one instance type in the placement group, you increase your chances of getting an insufficient capacity error.</li>
 <li>If you receive a capacity error when launching an instance in a placement group that already has running instances, stop and start all of the instances in the placement group and try the launch again. Restarting the instances may migrate them to hardware that has the capacity for all the requested instances.</li>
@@ -1014,7 +1062,7 @@
 <li>Spreads your instances across logical partitions such that groups of <strong>instances in one partition do not share the underlying hardware with groups of instances in different partitions</strong>.</li>
 <li>Used by l<strong>arge distributed and replicated workloads</strong>.</li>
 </ul>
-<h2 id="autoscaling"><strong>Autoscaling</strong></h2>
+<h2 id="autoscaling"><strong>Autoscaling</strong><a class="headerlink" href="#autoscaling" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Lifecycle hooks enable you to perform custom actions as the Auto Scaling group launches or terminates instances.</li>
 </ul>
@@ -1034,7 +1082,7 @@
 <li>Rebalancing AZs launches new instances before terminating the old ones.</li>
 <li>Auto Scaling creates a new scaling activity for terminating the unhealthy instance and then terminates it. Later, another scaling activity launches a new instance to replace the terminated instance.</li>
 </ul>
-<h2 id="s3"><strong>S3</strong></h2>
+<h2 id="s3"><strong>S3</strong><a class="headerlink" href="#s3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>S3 standard: There is no minimum storage duration charge and no retrieval fee (use case: if you want to keep data for a few days only)</li>
 <li>Object-level permissions: <strong>For actions inside the bucket</strong>(e.g. GetObject), add <strong>/</strong><em> after arn, -&gt; arn:aws:s3:::test/</em></li>
@@ -1106,7 +1154,7 @@
 </ul>
 <p><img alt="" src="https://miro.medium.com/max/1400/1*_CEqBTuUgY508KtMxf42ww.png" /></p>
 <p>Snow Services Comparison</p>
-<h2 id="iam"><strong>IAM</strong></h2>
+<h2 id="iam"><strong>IAM</strong><a class="headerlink" href="#iam" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Permissions Boundary to <strong>limit max access of users</strong>. They can only be applied to roles or users, not IAM groups.</li>
 </ul>
@@ -1134,7 +1182,7 @@
 <li>SCPs affect all users and roles in the attached accounts, including the root user.</li>
 <li>SCPs do not affect any service-linked role.</li>
 </ul>
-<h2 id="vpc"><strong>VPC</strong></h2>
+<h2 id="vpc"><strong>VPC</strong><a class="headerlink" href="#vpc" title="Permanent link">&para;</a></h2>
 <ul>
 <li>VPN connection: Virtual Private Gateway endpoint on the AWS VPC side — Customer Gateway on the on-premises side.</li>
 <li>You can’t have a VPC with only a public subnet and AWS Site-to-Site VPN.</li>
@@ -1195,7 +1243,7 @@
 <ul>
 <li>nat for ipv6.</li>
 </ul>
-<h2 id="route53"><strong>Route53</strong></h2>
+<h2 id="route53"><strong>Route53</strong><a class="headerlink" href="#route53" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Routing policy multi-value supports up to 8 healthy records for each multi-value query.</li>
 <li>To integrate an external domain to route53, update the nameservers on the 3rd party registrar with your public hosted zone.</li>
@@ -1212,7 +1260,7 @@
 <p><strong>Active-Passive Failover</strong> when you want a primary resource or group of resources to be available the majority of the time, and you want a secondary resource or group of resources to be on standby in case all the primary resources become unavailable.</p>
 </li>
 </ul>
-<h2 id="ebs"><strong>EBS</strong></h2>
+<h2 id="ebs"><strong>EBS</strong><a class="headerlink" href="#ebs" title="Permanent link">&para;</a></h2>
 <ul>
 <li>By default, the root volume for an AMI backed by Amazon EBS is deleted when the instance terminates.</li>
 <li>For an encrypted EBS volume, data stored at rest on the volume, data moving between the volume and the instance, snapshots created from the volume, and volumes created from those snapshots are all encrypted.</li>
@@ -1249,7 +1297,7 @@
 <li>For high I/O performance, instance store volumes are a better option.</li>
 <li>You cant resize the instance store.</li>
 </ul>
-<h2 id="efs"><strong>EFS</strong></h2>
+<h2 id="efs"><strong>EFS</strong><a class="headerlink" href="#efs" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Control which EC2 instances can access your EFS file system with security group rules and IAM policies.</li>
 <li>1000s on concurrent NFS clients, 10Gbs throughput.</li>
@@ -1268,7 +1316,7 @@
 <li>For machine learning, high-performance computing (HPC), video processing, and financial modeling.</li>
 <li>Ability to both process the ‘hot data’ in a parallel and distributed fashion as well as easily store the ‘cold data’ on Amazon S3.</li>
 </ul>
-<h2 id="rds"><strong>RDS</strong></h2>
+<h2 id="rds"><strong>RDS</strong><a class="headerlink" href="#rds" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Multi A-Z synchronous replication</strong> across AZs. Replication between the primary and standby instances does not incur additional data transfer charges.</li>
 <li><strong>Read replicas asynchronous replication</strong> across AZs or cross-region, up to 5.</li>
@@ -1303,7 +1351,7 @@
 <li>If you are running Aurora Serverless and the DB instance or AZ becomes unavailable, Aurora will automatically recreate the DB instance in a different AZ.</li>
 <li>If you have a single instance, Aurora will attempt to create a new DB Instance in the same Availability Zone as the original instance. This replacement of the original instance is done on a best-effort basis and may not succeed.</li>
 </ul>
-<h2 id="dynamodb"><strong>DynamoDB</strong></h2>
+<h2 id="dynamodb"><strong>DynamoDB</strong><a class="headerlink" href="#dynamodb" title="Permanent link">&para;</a></h2>
 <ul>
 <li>DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for Amazon DynamoDB that delivers <strong>up to a 10 times performance improvement — from milliseconds to microseconds</strong>.</li>
 <li>Tables must have provisioned read and write capacity units RCU, WRC.</li>
@@ -1313,7 +1361,7 @@
 <li><strong>All DynamoDB tables are encrypted</strong>. There is no option to enable or disable encryption for new or existing tables. By default, all DynamoDB tables are encrypted under an AWS owned customer master key (CMK), which does not write to CloudTrail logs.</li>
 <li>If the shard iterator expires immediately before you can use it, this might indicate that the DynamoDB table used by Kinesis does not have enough capacity to store the lease data. To solve, increase the write capacity assigned to the shard table.</li>
 </ul>
-<h2 id="elasticache"><strong>Elasticache</strong></h2>
+<h2 id="elasticache"><strong>Elasticache</strong><a class="headerlink" href="#elasticache" title="Permanent link">&para;</a></h2>
 <ul>
 <li>For <strong>sub-millisecond latency caching</strong>, ElastiCache is the best choice.</li>
 </ul>
@@ -1328,7 +1376,7 @@
 <li>IAM Auth is not supported by ElastiCache.</li>
 <li>Redis AUTH(enable Redis to require a token (password) before allowing clients to execute commands, thereby improving data security).</li>
 </ul>
-<h2 id="redshift"><strong>Redshift</strong></h2>
+<h2 id="redshift"><strong>Redshift</strong><a class="headerlink" href="#redshift" title="Permanent link">&para;</a></h2>
 <ul>
 <li>With Spectrum, you can efficiently query and retrieve structured and semistructured data from files in Amazon S3 without having to load the data into Amazon Redshift tables.</li>
 </ul>
@@ -1339,7 +1387,7 @@
 <li>Redshift enhanced VPC routing; copy/unload goes through VPC.</li>
 <li>Possibility to copy snapshots for a cluster to another region for DR.</li>
 </ul>
-<h2 id="cloudwatch"><strong>Cloudwatch</strong></h2>
+<h2 id="cloudwatch"><strong>Cloudwatch</strong><a class="headerlink" href="#cloudwatch" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Metrics belong to namespaces; Dimension is an attribute of a metric, Up to 10 dimensions per metric.</li>
 <li>Automatically recover ec2: If your instance has a public IPv4 address, it <strong>retains the public IPv4 address</strong> after recovery. During instance recovery, the instance is migrated during an instance reboot, and <strong>any data that is in-memory is lost</strong>.</li>
@@ -1349,7 +1397,7 @@
 <ul>
 <li>Recommended when you want to build an application that reacts to events from SaaS applications and/or AWS services. Only event-based service that integrates directly with third-party SaaS partners.</li>
 </ul>
-<h2 id="encryptionsecrets"><strong>Encryption/Secrets</strong></h2>
+<h2 id="encryptionsecrets"><strong>Encryption/Secrets</strong><a class="headerlink" href="#encryptionsecrets" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Key Policies: control access to keys; you cannot control access without them.</li>
 <li>Automatic key rotation: CMK every one year.</li>
@@ -1374,7 +1422,7 @@
 <li>A good option to use with SSE-C.</li>
 <li>It is possible to lose keys that were created since the most recent daily backup if the CloudHSM cluster that you are using fails and you are not using two or more HSMs.</li>
 </ul>
-<h2 id="kinesis"><strong>Kinesis</strong></h2>
+<h2 id="kinesis"><strong>Kinesis</strong><a class="headerlink" href="#kinesis" title="Permanent link">&para;</a></h2>
 <p><strong>Kinesis Data Streams</strong></p>
 <ul>
 <li><strong>Default data retention 1 day</strong> can go up to 7.</li>
@@ -1392,7 +1440,7 @@
 <li>Data into Amazon S3, Amazon Redshift, Amazon Elasticsearch Service, generic HTTP endpoints and Datadog, New Relic, MongoDB, Splunk.</li>
 <li>Load streaming data into Redshift for near real-time analytics.</li>
 </ul>
-<h2 id="sqs"><strong>SQS</strong></h2>
+<h2 id="sqs"><strong>SQS</strong><a class="headerlink" href="#sqs" title="Permanent link">&para;</a></h2>
 <ul>
 <li>When you need <strong>messaging semantics</strong>(ack/fail) and <strong>visibility timeout</strong>(default 30s).</li>
 <li>Dynamically increasing concurrency/throughput at read time.</li>
@@ -1414,7 +1462,7 @@
 <li>An Amazon SQS message can contain up to 10 metadata attributes.</li>
 <li>By default, <strong>ReceiveMessageWaitTimeSeconds</strong> is zero, which means it is using Short polling. If it is set to a value greater than zero, then it is Long polling.</li>
 </ul>
-<h2 id="sns"><strong>SNS</strong></h2>
+<h2 id="sns"><strong>SNS</strong><a class="headerlink" href="#sns" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Event producers send events to 1 topic; we can have many subs.</li>
 <li>100000 topics limit</li>
@@ -1423,7 +1471,7 @@
 </ul>
 <p><img alt="" src="https://miro.medium.com/max/1334/1*VSGvn9JS2k-AvyUXRQOuEw.png" /></p>
 <p><strong>SNS FIFO</strong></p>
-<h2 id="loadbalancers"><strong>LoadBalancers</strong></h2>
+<h2 id="loadbalancers"><strong>LoadBalancers</strong><a class="headerlink" href="#loadbalancers" title="Permanent link">&para;</a></h2>
 <ul>
 <li>LBs can scale but not instantaneously.</li>
 <li>Elastic Load Balancing stops sending requests to targets that are deregistering. By default, Elastic Load Balancing waits 300s(can be set between 1s to 3600s) seconds before completing the deregistration process, which can <strong>help in-flight requests to the target to complete</strong>(connection drain).</li>
@@ -1461,7 +1509,7 @@
 <ul>
 <li>CLB does not support Server Name Indication (SNI).</li>
 </ul>
-<h2 id="lambda"><strong>Lambda</strong></h2>
+<h2 id="lambda"><strong>Lambda</strong><a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Supports <strong>1000 concurrent executions per AWS account per region</strong>, contact support to raise the limit if needed.</li>
 <li>Supported languages: C#/.NET, GO, node.js, Python, Java, Ruby.</li>
@@ -1473,7 +1521,7 @@
 <ul>
 <li>Serverless workflows orchestration.</li>
 </ul>
-<h2 id="cloudfront"><strong>Cloudfront</strong></h2>
+<h2 id="cloudfront"><strong>Cloudfront</strong><a class="headerlink" href="#cloudfront" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Delivering data out of CloudFront can be <strong>more cost-effective than delivering it from S3</strong> directly to your users.</li>
 <li>Use CloudFront to <strong>improve application performance</strong> to serve static content from S3.</li>
@@ -1487,7 +1535,7 @@
 <li>You can also use an EC2 instance or a custom origin in configuring CloudFront.</li>
 <li>The <strong>Cache-Control</strong> and <strong>Expires</strong> headers control how long objects stay in the cache. The <strong>Cache-Control max-age</strong> directive lets you specify how long (in seconds) you want an object to remain in the cache before CloudFront gets the object again from the origin server. The minimum expiration time CloudFront supports is 0 seconds for web distributions and 3600 seconds for RTMP distributions.</li>
 </ul>
-<h2 id="global-acceleratorga"><strong>Global Accelerator(GA)</strong></h2>
+<h2 id="global-acceleratorga"><strong>Global Accelerator(GA)</strong><a class="headerlink" href="#global-acceleratorga" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Directs traffic to optimal endpoints over the AWS global network.</li>
 <li>Improves the availability and performance of your internet applications.</li>
@@ -1533,7 +1581,7 @@
 <li>StackSet extends the functionality of stacks by enabling you to create, update, or delete stacks <strong>across multiple accounts and regions</strong> with a single operation.</li>
 <li>Use the <strong>CreationPolicy</strong> attribute when you want to wait on resource configuration actions before stack creation proceeds.</li>
 </ul>
-<h2 id="cognito"><strong>Cognito</strong></h2>
+<h2 id="cognito"><strong>Cognito</strong><a class="headerlink" href="#cognito" title="Permanent link">&para;</a></h2>
 <p><strong>User pools</strong></p>
 <ul>
 <li>Provide built-in user management e.g., sign-in and register functionality for apps.</li>
@@ -1548,7 +1596,7 @@
 </ul>
 <p><img alt="" src="https://miro.medium.com/max/1400/1*w3x186zlyZ60tTn64bQ7LQ.png" /></p>
 <p>Database Migration Service Use Case: Migrate data from S3 to Kinesis</p>
-<h2 id="storage-gateway"><strong>Storage Gateway</strong></h2>
+<h2 id="storage-gateway"><strong>Storage Gateway</strong><a class="headerlink" href="#storage-gateway" title="Permanent link">&para;</a></h2>
 <p><strong>File Gateway</strong></p>
 <p><img alt="" src="https://miro.medium.com/max/1400/1*Zl8ZnpgNwLeX4TPc2-YazQ.png" /></p>
 <p>File Gateway Architecture</p>
@@ -1600,7 +1648,7 @@
 <ul>
 <li>Automate your image and video analysis with machine learning.</li>
 </ul>
-<h2 id="vpc-endpoints"><strong>VPC Endpoints</strong></h2>
+<h2 id="vpc-endpoints"><strong>VPC Endpoints</strong><a class="headerlink" href="#vpc-endpoints" title="Permanent link">&para;</a></h2>
 <ul>
 <li>When you create a VPC endpoint, you can attach an endpoint policy that controls access to the service to which you are connecting.</li>
 </ul>
@@ -1613,7 +1661,7 @@
 <ul>
 <li>An elastic network interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service.</li>
 </ul>
-<h2 id="enhanced-networking">Enhanced Networking</h2>
+<h2 id="enhanced-networking">Enhanced Networking<a class="headerlink" href="#enhanced-networking" title="Permanent link">&para;</a></h2>
 <p><strong>Elastic Network Adapter(ENA)</strong></p>
 <ul>
 <li>Enhanced networking capabilities with network speeds of up to 100 Gbps.</li>
@@ -1687,7 +1735,7 @@
 <li>MariaDB: 3306 (same as MySQL)</li>
 <li>Aurora: 5432 (if PostgreSQL compatible) or 3306 (if MySQL compatible)</li>
 </ul>
-<h3 id="disaster-recovery-in-aws"><strong>Disaster Recovery in AWS</strong></h3>
+<h3 id="disaster-recovery-in-aws"><strong>Disaster Recovery in AWS</strong><a class="headerlink" href="#disaster-recovery-in-aws" title="Permanent link">&para;</a></h3>
 <ul>
 <li>RPO: Recovery Point Objective -&gt; how much data loss we are willing to recover</li>
 <li>RTO: Recovery Time Objective -&gt; downtime between disaster and RTO</li>

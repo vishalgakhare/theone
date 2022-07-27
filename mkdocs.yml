@@ -42,7 +42,6 @@ extra:
 # $ pip install pymdown-extensions
 # https://facelessuser.github.io/pymdown-extensions/installation/
 markdown_extensions:
-  - footnote
   # working with images
   - attr_list
   - md_in_html
