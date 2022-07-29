@@ -9,7 +9,7 @@ VFS offers a [form-filing-assistance](https://vfs.mioot.com/forms/In/USA/FFS/)bu
 - US Passport - This requires birth certificate. It takes 3-4 weeks to receive the birth certificate and then another month to receive the passport after the passport application is submitted. 
 - SSN. Therefore, the earliest the OCI application can be submitted is 2 months after the birth.
 - US Passport Size Photos (Soft Copy)
-- Thumb Impression (Soft Copy < 500kb)
+- Thumb Impression (**Soft Copy < 500kb**)
 
 ## Step A - Registration
 
@@ -32,7 +32,7 @@ VFS offers a [form-filing-assistance](https://vfs.mioot.com/forms/In/USA/FFS/)bu
 
 ## Step C- Docs (PDF only, size < 1000KB only)
 
-- Upload following soft copies. Many documents when scanned easily exceed 1MB file size. The only option is to use low DPI setting when scanning.
+- Upload following soft copies. Many documents when scanned easily exceed **1MB** file size. The only option is to use low DPI setting when scanning.
 - When a certain type of document is uploaded, the same cannot be uploaded again.
 
 1. US Passport
@@ -97,4 +97,5 @@ Washington, DC 20005
 ## Step G - Status Check and Contact
 
 - [Track your application on VFS](https://visa.vfsglobal.com/usa/en/ind/track-application)
-- 
+- VFS Customer Care is not free. Charges $2.48 per minute.
+- [Contact VFS][https://services.vfsglobal.com/usa/en/ind/contact-us]
