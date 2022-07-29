@@ -1,9 +1,13 @@
 
+The VFS Global is GOI Embassy's service provide for OCI application. The high level steps are provided on vfsglobal site [here](https://services.vfsglobal.com/usa/en/ind/apply-oci-services)
+
+VFS offers a [form-filing-assistance](https://vfs.mioot.com/forms/In/USA/FFS/)but the documents identified need to be notarized and allows PDF copies up to 2MB in contrast to what GOI website https://ociservices.gov.in/  requires.
+
 
 ## Step A - Pre-requisite
 
-- US Passport
-- SSN
+- US Passport - This requires birth certificate. It takes 3-4 weeks to receive the birth certificate and then another month to receive the passport after the passport application is submitted. 
+- SSN. Therefore, the earliest the OCI application can be submitted is 2 months after the birth.
 - US Passport Size Photos (Soft Copy)
 - Thumb Impression (Soft Copy < 500kb)
 
@@ -82,6 +86,7 @@
 	- Print From/To labels
 
 - Address from VFS Global and https://indianembassyusa.gov.in/pages/MjY,
+- Do not staple.
 
 > 
 1025 Vermont Ave
@@ -91,3 +96,5 @@ Washington, DC 20005
 
 ## Step G - Status Check and Contact
 
+- [Track your application on VFS](https://visa.vfsglobal.com/usa/en/ind/track-application)
+- 
