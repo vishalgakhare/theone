@@ -39,7 +39,7 @@
 		4. Total sqft: Fee increases with sqft. Usually, the base price covers up to 2000 sqft.
 	1.  Reviews
 
-### Quotes
+<!-- ### Quotes
 
 | inspector | pre-drywall | pre-closing| combined|
 |------|------------|------------|-----------|
@@ -48,5 +48,5 @@
 |Award Homes|$325|$425|$325+$375|
 |[Michael Bryan](https://inspectingcva.com/inspection-costs/)|$480|?|?|
 |Kevin Joyner|?|?|?|
-|[Earl Handrix](https://www.inspectorsherlockhomes.com/)|$350|$445|$350|
+|[Earl Handrix](https://www.inspectorsherlockhomes.com/)|$350|$445|$350| -->
 

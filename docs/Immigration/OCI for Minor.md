@@ -97,5 +97,8 @@ Washington, DC 20005
 ## Step G - Status Check and Contact
 
 - [Track your application on VFS](https://visa.vfsglobal.com/usa/en/ind/track-application)
-- VFS Customer Care is not free. Charges $2.48 per minute.
+- Track your application with Indian Embassy [https://ociservices.gov.in/statusEnqury](https://ociservices.gov.in/statusEnqury)
+	- OCI Application Number 
+	- Passport Number 
+- VFS Customer Care is not free. Charges $2.48 per minute after initial 5 min.
 - [Contact VFS][https://services.vfsglobal.com/usa/en/ind/contact-us]
