@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/Personal Finance/New Home Inspection.md",
+            "file": "docs/Personal Help/Game Theory of Trust.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Personal Finance/New Home Inspection.md",
+                "file": "docs/Personal Help/Game Theory of Trust.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,8 +89,8 @@
   },
   "active": "2b76472d1ee91d25",
   "lastOpenFiles": [
-    "docs/Immigration/OCI for Minor.md",
     "docs/Personal Finance/New Home Inspection.md",
+    "docs/Immigration/OCI for Minor.md",
     "docs/Personal Finance/Home Buying.md",
     "docs/AWS/Networking.md",
     "docs/Books/The Effective Engineer.md",
