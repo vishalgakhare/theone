@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2b76472d1ee91d25",
+        "id": "bc934616d07bd8e2",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "docs/Personal Help/Game Theory of Trust.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Personal Help/Game Theory of Trust.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +82,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2b76472d1ee91d25",
+  "active": "bc934616d07bd8e2",
   "lastOpenFiles": [
+    "_templates/template_recipe.md",
+    "Docker.md",
+    "docs/Software Engineering/Docker.md",
+    "docs/AWS/Cheatsheet.md",
+    "docs/AWS/Networking.md",
+    "docs/Personal Help/Game Theory of Trust.md",
     "docs/Personal Finance/New Home Inspection.md",
     "docs/Immigration/OCI for Minor.md",
     "docs/Personal Finance/Home Buying.md",
-    "docs/AWS/Networking.md",
-    "docs/Books/The Effective Engineer.md",
-    "docs/Books/Your Money Ratios.md",
-    "docs/Books/Your Money or Your Life.md",
-    "docs/AWS/Cheatsheet.md",
-    "docs/index.md",
-    "docs/Docker.md"
+    "docs/Books/The Effective Engineer.md"
   ]
 }

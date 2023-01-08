@@ -1,0 +1,170 @@
+{
+  "main": {
+    "id": "468cfbd091a83864",
+    "type": "split",
+    "children": [
+      {
+        "id": "1759a16792808b99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f0751e44145e509a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Books/The Effective Engineer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a01a98487d682469",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Books/Underlines.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dc3d883329417968",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Books/Your Money Ratios.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7e4b04697c19f189",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Books/Staff Engineer Path.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "77236a59c86bd098",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Books/Staff Engineer Path.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8bce0434045a29cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4ed979ba76c5f57",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "988a1b21d585c1b9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "86f7f5be42a24b07",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fda9d0f6bbe9aa67",
+    "type": "split",
+    "children": [
+      {
+        "id": "bde7f1b3dbfb7bb6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3b7dd5704fe96ea",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/Books/Staff Engineer Path.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "77236a59c86bd098",
+  "lastOpenFiles": [
+    "docs/Physics.md",
+    "docs/Books/Staff Engineer Path.md",
+    "docs/Books/Your Money Ratios.md",
+    "docs/Books/Your Money or Your Life.md",
+    "docs/Books/Underlines.md",
+    "docs/Books/The Effective Engineer.md",
+    "docs/Personal Finance/New Home Inspection.md",
+    "docs/Personal Finance/Home Buying.md",
+    "docs/Self-Help/Game Theory of Trust.md",
+    "docs/Immigration/OCI for Minor.md"
+  ]
+}
