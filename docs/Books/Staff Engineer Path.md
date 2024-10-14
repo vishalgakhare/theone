@@ -47,7 +47,7 @@ The successful impact also require following skills (similar to building buttres
 There are 3 maps you would need:
 
 1. Locator Map - Zoom out to know where the team is and what's its place in the org. This would  isolate and remove the importance of the local problems.
-2. Treasure Map - It's the destination. You should be able to describe the treasure available at the destination. 
+2. Treasure Map - It's the destination. You should be able to tell a compelling story of the treasure available at the destination. 
 3. Topographical Map - Direction and navigation through the terrain to the destination. You should be able to see the path to get there and the challenges/wins that would happen on the way. What support and friction that you would run into. 
 
 The secrets to these maps lie in the culture. But **What is culture?**  
@@ -61,7 +61,20 @@ The secrets to these maps lie in the culture. But **What is culture?**
 
 - Practice the skills of intentionally looking for a bigger picture and seeing what’s happening.  
 - Understand your work in context: know your customers, talk with peers outside your group, understand your success metrics, and be clear on what’s actually important.  
-- Know how your organization works and how decisions get made within it.  
+- Know how your organization works and how decisions get made within it.  Try to get invited into that "the room" but then figure out the "shadow org" (un-written structures through which power and influence flow) - the one that meet unofficially and make decisions.
 - Build or discover paths to allow information you need to come to you.  
 - Be clear about what goals everyone is aiming for.  
 - Think about your own work and what your journey is.
+
+
+#### Creating the Big Picture
+
+- If everyone is working off the same big picture, your work is done. If not, you need to create a big picture and share with all.
+- Technical Vision = what the future looks like after the work is done, problems are solved.
+- Technical Strategy = plan of action, challenges to overcome. It should cover:
+	- Diagnosis = What's going on? Identify the pattern behind the noise, the essential characteristic of the situation.
+	- Guiding Policy = What should be the guiding light when you face obstacles to overcome the diagnosis.
+	- Coherent Action = Specific action (technical, process or people)
+- Documenting vision/strategy takes time (iteration, alignment) and could be a overkill when you can get the team on the same page in a single meeting.
+- If someone is already working on it, _share the lead_ or _follow their lead_ or _step away_.
+- Initial ideas -> write > talk to key people > revise (make decisions, trade-offs) until it's ready to publish/share with the broader group.

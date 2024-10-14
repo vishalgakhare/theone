@@ -1,0 +1,1 @@
+- John was a big deal - the operative word being "was".
