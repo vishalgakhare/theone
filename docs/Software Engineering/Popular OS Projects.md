@@ -1,31 +1,31 @@
-Google
+**Google**
 - Kubernetes
 - TensorFlow
 - Go
 - Angular
 
-Meta
+**Meta**
 - React
 - PyTorch
 - GraphQL
 - Cassandra
 
-Microsoft
+**Microsoft**
 - VSCode
 - TypeScript
 - Playwright
 
-Netflix
+**Netflix**
 - Chaos Monkey
 - Hystrix
 - Zuul
 
-LinkedIn
+**LinkedIn**
 - Kafka
 - Samza
 - Pinot
 
-RedHat
+**RedHat**
 - Ansible
 - OpenShift
 - Ceph Storage
