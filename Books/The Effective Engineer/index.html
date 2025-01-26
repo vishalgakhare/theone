@@ -1,0 +1,1763 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The second brain - digial garden - for all things I read, learn and think.">
+      
+      
+        <meta name="author" content="Vishal Gakhare">
+      
+      
+        <link rel="canonical" href="https://vishalgakhare.github.io/theone/Books/The%20Effective%20Engineer/">
+      
+      
+        <link rel="prev" href="../Staff%20Engineer%20Path/">
+      
+      
+        <link rel="next" href="../Underlines/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Effective Engineer - Notes - Vishal Gakhare</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#effective-engineer-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Vishal Gakhare" class="md-header__button md-logo" aria-label="Vishal Gakhare" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vishal Gakhare
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Effective Engineer - Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vishalgakhare/theone.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    vishalgakhare/theone
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Vishal Gakhare" class="md-nav__button md-logo" aria-label="Vishal Gakhare" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    Vishal Gakhare
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vishalgakhare/theone.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    vishalgakhare/theone
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vishal Gakhare's CV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Physics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Physics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AWS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/Cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/Networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../English/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    English
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Jerks%20At%20Work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jerks at work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Staff%20Engineer%20Path/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Staff Engineer Path
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Effective Engineer - Notes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Effective Engineer - Notes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-an-effective-engineer" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's an Effective Engineer?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adopt-the-right-mindsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adopt the Right Mindsets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adopt the Right Mindsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#focus-on-high-leverage-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus on High Leverage Activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimize-for-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimize for Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioritize-regularly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prioritize Regularly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invest-in-iteration-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invest in Iteration Speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-what-you-want-to-improve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure what you want to Improve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-your-ideas-early-and-often" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate your ideas early and often.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improve-project-estimation-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improve project estimation skills.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balance-quality-with-pragmatism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balance Quality with Pragmatism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Balance Quality with Pragmatism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manage-complexity-through-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manage complexity through Abstraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automate-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automate Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repay-technical-debt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repay Technical Debt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce-operational-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reduce Operational Complexity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fail-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail Fast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relentlessly-automate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relentlessly Automate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invest-in-your-teams-growth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invest in your team's Growth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-books-to-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 Books to read
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10 Books to read">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blogs:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Underlines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Underlines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Your%20Money%20Ratios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Your Money Ratios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Your%20Money%20or%20Your%20Life/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Your Money or Your Life
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            How
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../How/How%20does%20VISA%20make%20money/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How does VISA make money
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Self Help
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Self Help
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Self-Help/Food%20For%20Thought/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Food For Thought
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Self-Help/Game%20Theory%20of%20Trust/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Game Theory of Trust
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Engineering
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Software Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software%20Engineering/12f-app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12f app
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software%20Engineering/ArchPatterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArchPatterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software%20Engineering/Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software%20Engineering/MicroServices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MicroServices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software%20Engineering/NFR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software%20Engineering/Popular%20OS%20Projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Popular OS Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software%20Engineering/Setting%20Up%20Mac%20for%20Coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up Mac for Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Software%20Engineering/Setting%20Up%20the%20Terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up the Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-an-effective-engineer" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's an Effective Engineer?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adopt-the-right-mindsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adopt the Right Mindsets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adopt the Right Mindsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#focus-on-high-leverage-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus on High Leverage Activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimize-for-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimize for Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioritize-regularly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prioritize Regularly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invest-in-iteration-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invest in Iteration Speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-what-you-want-to-improve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure what you want to Improve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-your-ideas-early-and-often" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate your ideas early and often.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improve-project-estimation-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improve project estimation skills.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balance-quality-with-pragmatism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balance Quality with Pragmatism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Balance Quality with Pragmatism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manage-complexity-through-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manage complexity through Abstraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automate-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automate Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repay-technical-debt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repay Technical Debt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce-operational-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reduce Operational Complexity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fail-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail Fast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relentlessly-automate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relentlessly Automate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invest-in-your-teams-growth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invest in your team's Growth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-books-to-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 Books to read
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10 Books to read">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blogs:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="effective-engineer-notes">Effective Engineer - Notes<a class="headerlink" href="#effective-engineer-notes" title="Permanent link">&para;</a></h1>
+<ul>
+<li>By Edmond Lau. Highly Recommended <img alt="👍" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44d.svg" title=":+1:" /></li>
+<li><a href="http://www.theeffectiveengineer.com/">http://www.theeffectiveengineer.com/</a></li>
+</ul>
+<h3 id="whats-an-effective-engineer">What's an Effective Engineer?<a class="headerlink" href="#whats-an-effective-engineer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>They are the people who get things done. Effective Engineers produce results. </li>
+</ul>
+<h2 id="adopt-the-right-mindsets">Adopt the Right Mindsets<a class="headerlink" href="#adopt-the-right-mindsets" title="Permanent link">&para;</a></h2>
+<h3 id="focus-on-high-leverage-activities">Focus on High Leverage Activities<a class="headerlink" href="#focus-on-high-leverage-activities" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Leverage = Impact Produced / Time Invested</li>
+<li>Use Leverage as Your Yardstick for Effectiveness</li>
+<li>80% of the impact comes from 20% of the work.</li>
+<li>Focus on high leverage and not just easy wins.</li>
+</ul>
+<h3 id="optimize-for-learning">Optimize for Learning<a class="headerlink" href="#optimize-for-learning" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Change jobs if you have to. </li>
+<li>Optimizing for learning is high leverage. </li>
+<li>
+<p>Adopt a growth mindset. </p>
+</li>
+<li>
+<p>Talk to people. Become good at telling stories. It gets better with time. </p>
+</li>
+<li>Those with a growth mindset believe that they can cultivate and grow their intelligence and skills through effort.</li>
+<li>
+<p>Own your story.</p>
+</li>
+<li>
+<p>Invest in the rate of learning</p>
+</li>
+<li>
+<p>Learning compounds. Compounding leads to exponential growth. Earlier the compounding starts, the better. </p>
+</li>
+<li>Working on unchallenging tasks is a huge opportunity cost. You missed out on compounded learning. </li>
+<li>Prioritize learning over profitability.</li>
+<li>
+<p>Invest your time in activities with the highest learning rate.</p>
+</li>
+<li>
+<p>Seek Work Environments Conducive to Learning</p>
+</li>
+<li>
+<p>Fast Growth: Companies where #problems &gt;&gt; #resources. Opportunity to choose high impact work.</p>
+</li>
+<li>Make sure you are working on high priority projects. </li>
+<li>Openness: Look for culture with curiosity, where everyone is encouraged to ask questions.</li>
+<li>Fast Paced. </li>
+<li>People smarter than you.</li>
+<li>
+<p>Autonomy: Freedom to choose what to work on. Smaller companies =&gt; More autonomy. </p>
+</li>
+<li>
+<p>While on Job</p>
+</li>
+<li>
+<p>Make a daily habit of acquiring new skills.</p>
+</li>
+<li>Read code written by brilliant engineers. </li>
+<li>Jump fearlessly into code you don't know.</li>
+<li>Always be learning. Invest in skills that are in high demand.</li>
+<li>Read Books. Attend Conferences.</li>
+<li>Build and maintain strong relationships.</li>
+</ul>
+<h3 id="prioritize-regularly">Prioritize Regularly<a class="headerlink" href="#prioritize-regularly" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Opportunity cost of working on wrong ideas can set back growth by years.</li>
+<li>Prioritize tasks based on ROI.</li>
+<li>Regular prioritization is high leverage activity.</li>
+<li>On TODO Lists:</li>
+<li>Maintain a 'single' todo lists where all tasks are listed. </li>
+<li>
+<p>Don't try to remember stuff. Brain is bad at remembering. It's rather good at processing. </p>
+</li>
+<li>
+<p>Ask yourself regularly: Is this the most important thing I should be working on?</p>
+</li>
+<li>Focus on what directly produces value. </li>
+<li>Learn to say no.</li>
+<li>Focus on the important and non-urgent.</li>
+<li>Find ways to get into flow. “A state of effortless concentration so deep that they lose their sense of time, of themselves, of their problems.”</li>
+<li>When possible, preserve larger blocks of focused time in your schedule.</li>
+<li>Limit the amount of Work in Progress.</li>
+<li>Cost of context switching is high.</li>
+<li>Prioritizing is difficult. </li>
+<li>Prioritization is high leverage. It has huge impact on your ability to get right things done.</li>
+</ul>
+<h3 id="invest-in-iteration-speed">Invest in Iteration Speed<a class="headerlink" href="#invest-in-iteration-speed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Continuous Deployment is high leverage.</li>
+<li>Will save a lot of time in manual deployment of code. They are the people who get things done. Effective Engineers produce results. </li>
+<li>Move fast to learn fast.</li>
+<li>Move fast and break things.</li>
+<li>Moving fast enables us to build more things and learn at faster rate. </li>
+<li>Invest in time saving tools.</li>
+<li>If you have to do something more than twice, write a tool the third time. </li>
+<li>Tools are multipliers that allow your to scale your impact beyond the confines of a day.</li>
+<li>Faster tools get used more often.</li>
+<li>Faster tools can enable new workflows that previously weren't possible.</li>
+<li>Productivity skyrockets with tools.</li>
+<li>Time saving property of tools also scale with team adoption.</li>
+<li>Shorten your debugging and validation Loops.</li>
+<li>Extra time spent in optimizing debugging workflow can help you fix annoying bugs with less headache.</li>
+<li>Debugging is hard. It's time consuming. Upfront investments to shorten debugging loops are worth it. </li>
+<li>High test coverage to reduce build and site breakages.</li>
+<li>Fast unit tests to encourage people to run them.</li>
+<li>Fast and incremental compiles and reloads to reduce development time.</li>
+<li>Master you programming environment.</li>
+<li>One editor. One high level language. Shell. Keyboard &gt; Mouse. Automate manual workflows. Use interactive shell. Make running specific tests easy.</li>
+<li><strong>Faster you can iterate, faster you can learn.</strong> </li>
+</ul>
+<h3 id="measure-what-you-want-to-improve">Measure what you want to Improve<a class="headerlink" href="#measure-what-you-want-to-improve" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use metric to drive progress.</li>
+<li>If you can't measure it, you can't improve it.</li>
+<li>
+<p>Good metric. </p>
+<ul>
+<li>Helps you focus on right things.</li>
+<li>Drives forward progress.</li>
+<li>Helps you guard against future regressions. </li>
+<li><strong>Performance ratcheting</strong>: Any change should strictly improve the metric.  </li>
+<li>Bad metric can lead to unwanted behavior.</li>
+<li>Examples: </li>
+<li>number of hours worked &lt; productivity.</li>
+<li>click through rates &lt; long click through rates.</li>
+<li>Metric you choose influences your decisions and behavior.</li>
+<li>Look for metric that, when optimized, maximizes impact for the team.</li>
+<li>Actionable metric - Whose movement can be casually explained by team's effort.</li>
+<li>Responsive metric - Updates quickly to give back feedback whether a given change was =ve or -ive.</li>
+<li>Choosing a metric is high leverage.</li>
+<li>Dedicate time to pick right metric. </li>
+</ul>
+</li>
+<li>
+<p>Instrument everything to understand what's going on. </p>
+</li>
+<li>Measure anything, measure everything. </li>
+<li>Graphite, statsd. A single line of code lets you define a new counter or timer on the fly. </li>
+<li>
+<p>Measuring goals you want to achieve is high leverage.</p>
+</li>
+<li>
+<p>Internalize useful numbers.</p>
+</li>
+<li>Knowledge of useful numbers provide a valuable shortcut for knowing where to invest efforts to maximize gains.</li>
+<li>Need upfront work. Need not be accurate, ballpark idea suffices.</li>
+<li>Knowing useful numbers enables you to do back of the envelope calculations to quickly estimate the performance properties of a design without actually building it.</li>
+<li>Internalizing useful number help you spot anomalies.</li>
+</ul>
+<p>Be skeptical about data integrity.
+ - Log data liberally.
+ - Build tools to iterate on data accuracy sooner.
+ - Examine data sooner.
+ - When numbers look off, dig in to it sooner.</p>
+<p><img alt="✔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2714.svg" title=":heavy_check_mark:" /> Measure your progress. Carefully choose your top-level metric. Instrument your system. Know your numbers. Prioritize data integrity. </p>
+<h3 id="validate-your-ideas-early-and-often">Validate your ideas early and often.<a class="headerlink" href="#validate-your-ideas-early-and-often" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Not validating early leads to wasted efforts.</li>
+<li>Don't delay get feedback. </li>
+<li>Find low effort ways to validate work. </li>
+<li>Power of small batches. Helps you avoid making a big mistake by stopping the flow.</li>
+<li>Approach problem iteratively. </li>
+<li>No large implementations.</li>
+<li>Working solo? Be wary. Be extra vocal and get feedback.</li>
+</ul>
+<h3 id="improve-project-estimation-skills">Improve project estimation skills.<a class="headerlink" href="#improve-project-estimation-skills" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Beware of mythical man month. Communication overhead is significant. </li>
+<li>Reduce risk early.</li>
+<li>Rewrite projects - almost always fail. </li>
+<li>Additional hours hurt productivity. Causes burnout. </li>
+<li>Do the riskiest task first. </li>
+<li>Allow buffer room for the unknown.</li>
+</ul>
+<h3 id="balance-quality-with-pragmatism">Balance Quality with Pragmatism<a class="headerlink" href="#balance-quality-with-pragmatism" title="Permanent link">&para;</a></h3>
+<ul>
+<li>High code quality. Code readability.</li>
+<li>Establish sustainable code review process.</li>
+<li>Code reviews help:</li>
+<li>Catch bugs and design problems early.</li>
+<li>Sharing working knowledge of the codebase.</li>
+<li>Increases long term agility. Easier to understand, quicker to modify. </li>
+</ul>
+<h4 id="manage-complexity-through-abstraction">Manage complexity through Abstraction<a class="headerlink" href="#manage-complexity-through-abstraction" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Example: MapReduce.</li>
+<li>Right abstractions make huge difference.</li>
+<li>“Pick the right ones, and programming will flow naturally from design; modules will have small and simple interfaces; and new functionality will more likely fit in without extensive reorganization,”</li>
+<li>“Pick the wrong ones, and programming will be a series of nasty surprises: interfaces will become baroque and clumsy as they are forced to accommodate unanticipated interactions, and even the simplest of changes will be hard to make.”</li>
+<li>The right abstraction can increase engineering productivity by an order of magnitude. </li>
+<li>Simple abstractions avoid interweaving multiple concepts, so that you can reason about them independently rather than being forced to consider them together.</li>
+<li>Designing good abstractions take work. </li>
+<li>An abstraction's usage and popularity provides a reasonable proxy for its quality.</li>
+</ul>
+<h4 id="automate-testing">Automate Testing<a class="headerlink" href="#automate-testing" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Unit test cases and some integration testing provide a scalable way of managing growing codebase.</li>
+<li>A suite of extensive and automated tests can reduce overall error rates by validating the quality and by safeguarding against regressions.</li>
+<li>Tests also allow engineers to make changes, especially large refactorings, with significantly higher confidence.</li>
+<li>Despite its benefits, it can be difficult to foster a culture of automated testing.</li>
+<li>Focus on high leverage tests. </li>
+<li>Writing more tests, creating a virtuous feedback cycle and saving more development time.</li>
+</ul>
+<h4 id="repay-technical-debt">Repay Technical Debt<a class="headerlink" href="#repay-technical-debt" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Technical debt refers to all the deferred work that’s necessary to improve the health and quality of the codebase and that would slow us down if left unaddressed.</li>
+<li>Accumulating technical debt is fine as far as it is repaid within time. </li>
+<li>Refactor often.</li>
+</ul>
+<h3 id="reduce-operational-complexity">Reduce Operational Complexity<a class="headerlink" href="#reduce-operational-complexity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Keep no. of technologies low. Don’t sway towards shiny new technologies.</li>
+<li>Every additional technology you add is is guaranteed to go wrong eventually. Will need your time. </li>
+<li>Do the simple thing first.</li>
+<li>Embrace operational simplicity. </li>
+<li>The first solution that comes to mind is generally complex. Don't stop. Keep peeling off the layers of onion. </li>
+<li>Simplify the architecture to reduce their operational burden. </li>
+<li>“What’s the simplest solution that can get the job done while also reducing our future operational burden?” </li>
+<li>Discipline to focus on simplicity is high leverage. </li>
+</ul>
+<h3 id="fail-fast">Fail Fast<a class="headerlink" href="#fail-fast" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fail immediately and visibly.</li>
+<li>Doesn’t necessarily mean crashing your programs for users.</li>
+<li>fail-fast to surface issues immediately. </li>
+<li>Failing fast is high leverage as it saves debugging time.</li>
+</ul>
+<h3 id="relentlessly-automate">Relentlessly Automate<a class="headerlink" href="#relentlessly-automate" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Automating mechanics is good.</li>
+<li>Automating decision making - no.</li>
+<li>Hone your ability to respond and recover quickly.</li>
+<li>Leverage recovering quickly &gt; Leverage preventing failures.</li>
+<li>“script for success,” practice failure scenarios, and work on our ability to recover quickly. </li>
+<li>Make batch process idempotent </li>
+<li>Make processes retryable, i.e., not leaving any global state. </li>
+</ul>
+<h3 id="invest-in-your-teams-growth">Invest in your team's Growth<a class="headerlink" href="#invest-in-your-teams-growth" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Invest in onboarding.</li>
+<li>The higher you climb up the engineering ladder, the more your effectiveness will be measured not by your individual contributions but by your impact on the people around you.</li>
+</ul>
+<blockquote>
+<p><strong>"You’re a staff engineer if you’re making a whole team better than it would be otherwise. You’re a principal engineer if you’re making the whole company better than it would be otherwise. And you’re distinguished if you’re improving the industry.”</strong> </p>
+</blockquote>
+<ul>
+<li>Focus primarily on making everyone around you succeed.</li>
+<li>Your career depends on your team's success.</li>
+<li>Make hiring everyone's responsibility. </li>
+<li>Shared ownership of code. </li>
+<li>Keep bus factor more than one. </li>
+<li>Shared ownership removes isolated silos of information.</li>
+<li>Build collective wisdom through post mortems.</li>
+<li>Invest in automated testing.</li>
+<li>Automated test cases lead to higher confidence when refactoring.</li>
+<li>Write test cases when the code is fresh in mind.</li>
+<li>Don’t be dogmatic about 100% code coverage.</li>
+<li>Value of tests increases over time and cost to write goes down. </li>
+<li>Hire the best. </li>
+<li>Surround yourself with great advisors</li>
+</ul>
+<p>☀️ : <strong>“Leverage is the lens through which effective engineers view their activities. ”</strong> ☀️</p>
+<h2 id="10-books-to-read">10 Books to read<a class="headerlink" href="#10-books-to-read" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Peopleware Productive projects and Teams. Amazon. My Summary.</li>
+<li>Team Geek: A Software Developer’s Guide to Working Well with Others. (Debugging Teams) Amazon. My Summary. </li>
+<li>High Output Management</li>
+<li>Getting Things Done: The Art of Stress-Free Productivity</li>
+<li>The 4-Hour Workweek: Escape 9-5, Live Anywhere, and Join the New Rich</li>
+<li>The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change</li>
+<li>Conscious Business: How to Build Value Through Values</li>
+<li>Your Brain at Work</li>
+<li>Flow: The Psychology of Optimal Experience</li>
+<li>Succeed: How We Can Reach Our Goals</li>
+</ul>
+<h3 id="blogs">Blogs:<a class="headerlink" href="#blogs" title="Permanent link">&para;</a></h3>
+<p>Recommended Blogs To Follow:</p>
+<ul>
+<li><a href="http://www.theeffectiveengineer.com/">http://www.theeffectiveengineer.com/</a> - The Effective Engineer is my personal blog, where I write about engineering habits, productivity tips, leadership, and culture.</li>
+<li><a href="http://www.kalzumeus.com/">http://www.kalzumeus.com/</a> - Patrick McKenzie runs his own software business and has written many excellent long-form articles on career advice, consulting, SEO, and software sales.</li>
+<li><a href="http://katemats.com/">http://katemats.com/</a> - Kate Matsudaira, who has worked at large companies like Microsoft and Amazon as well as at startups, shares advice about tech, leadership, and life on her blog.</li>
+<li><a href="http://randsinrepose.com/">http://randsinrepose.com/</a> - Michael Lopp has worked for many years in leadership positions at Netscape, Apple, Palantir, and Pinterest, and writes about tech life and engineering management.</li>
+<li><a href="http://softwareleadweekly.com/">http://softwareleadweekly.com/</a> - Oren Ellenbogen curates a high-quality weekly newsletter on engineering leadership and culture.</li>
+<li><a href="http://calnewport.com/">http://calnewport.com/</a> - Cal Newport, an assistant professor of computer science at Georgetown, focuses on evidence-based advice for building a successful and fulfilling life.</li>
+<li><a href="http://www.joelonsoftware.com/">http://www.joelonsoftware.com/</a> - Joel Spolsky, the co-founder of Stack Exchange, provides all sorts of programming pearls of wisdom on his blog.</li>
+<li><a href="http://martinfowler.com/">http://martinfowler.com/</a> - Martin Fowler, author of the book Refactoring, writes about how to maximize the productivity of software teams and provides detailed write-ups of common programming patterns.</li>
+<li><a href="http://pgbovine.net/">http://pgbovine.net/</a> - Philip Guo, a computer science professor, has written extensively and openly about his graduate school and work experiences.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/vishalgakhare" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/vishalgakhare/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>
