@@ -1,7 +1,0 @@
-- Application and System Design with AWS cloud, lead teams to develop well-managed platforms.  
-- (Serverless Apps in JS, TS) - Developed multiple serverless apps and utilities for the telephony system to interact with Amazon Lex. Re-designed and developed a softphone application.  
-- 2018 (Java, NodeJS, Bash Script, Mongo DB) - Worked on Java Spark and NodeJS batches to tokenize ~50M accounts and migrate ~250M records.  
-- 2016 (NodeJS, MongoDB) - Designed and developed Rest Api services backed with Mongo DB. The Rest services serviced 2M requests per day at an average of 20ms response time.  
-- 2012 (C#.Net, VS2010)- Worked on CTIBHO (Computer Telephony Interface) to support Avaya Dialer upgrade to version 5. The project won the Enterprise Circle of Excellence award.  
-- 2008 (C#.Net, VS2008)- Worked on Wells Fargo + Wachovia merger project to optimize/tune the performance of the application and the Oracle database queries. The performance improved by 50% for Oracle DB and by 90 % for applications.  
-- 2006 (C#.Net, VS2005) - Developed a Verizon One Source search module single-handedly on all the waterfall phases and delivered it with zero bugs.
